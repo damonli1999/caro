@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+    <section class="bg-dark text-light text-center shadow mb-20">
+        <div class="container p-5 bg-dark">
+            <div class="row">
+                <div class="d-md-flex bg-dark align-items-center justify-content-evenly">
+                    <h1 class="col text-center">Services</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center">
+    <div class="container p-10">
+    <div id="gallery" class=" bg-dark text-light p-10 p-lg-0 lg-10 text-center text-sm-start shadow lg">
+        <div class="container p-5">
+            <div class="row g-4 p-5">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <img src="../../static/images/mechanic2.jpg" alt="mechanic" class="img-fluid shadow-lg p-0">
+                    <figcaption>Diagnostic</figcaption>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <img src="../../static/images/mechanic3.jpg" alt="mechanic" class="img-fluid shadow-lg p-0">
+                    <figcaption>Inspection</figcaption>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <img src="../../static/images/scheudle.jpg" alt="mechanic" class="img-fluid shadow-lg p-0">
+                    <figcaption>Schedule Maintenance</figcaption>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

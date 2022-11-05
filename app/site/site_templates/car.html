@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+    <section class="bg-dark text-light text-center shadow mb-20">
+        <div class="container p-5 bg-dark">
+            <div class="row">
+                <div class="d-md-flex bg-dark align-items-center justify-content-evenly">
+                    <h1 class="col text-center">Cars</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center">
+        <div class="container d-grid gap-2">
+            <style>
+                .btn {
+                justify-content: center;
+                align-items: center;
+                background-color: DodgerBlue;
+                border: none;
+                color: white;
+                padding: 12px 30px;
+                cursor: pointer;
+                font-size: 20px;
+                }
+
+                .btn:hover {
+                background-color: RoyalBlue;
+                }
+            </style>
+            <button class="btn">New</button>
+            <style>
+                .btn {
+                justify-content: center;
+                align-items: center;
+                background-color: DodgerBlue;
+                border: none;
+                color: white;
+                padding: 12px 30px;
+                cursor: pointer;
+                font-size: 20px;
+                }
+
+                .btn:hover {
+                background-color: RoyalBlue;
+                }
+            </style>
+            <button class="btn">Used</button>
+        </div>
+    </section>
+{% endblock %}
