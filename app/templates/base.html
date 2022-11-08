@@ -7,7 +7,7 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="stylesheet" href="../static/css/main.css">
+<link rel="stylesheet" href="../static/Css/main.css">
 <title>Caro</title>
 </head>
 <body>
@@ -31,6 +31,9 @@
                     <li class="nav-item">
                         <a href="{{ url_for ('site.service') }}" class="nav-link">Services</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for ('site.profile') }}" class="nav-link">Profile</a>
+                    </li>
                     {% if current_user.is_authenticated %}
                     <li class="nav-item">
                         <a href="{{ url_for ('auth.logout') }}" class="nav-link">Logout</a>
@@ -47,7 +50,6 @@
             </div>
         </div>
     </nav>
-    
 {% block content %}
 {% endblock %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
