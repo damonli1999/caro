@@ -4,6 +4,10 @@ from models import db, User, Contact, contact_schema, contacts_schema
 
 api = Blueprint('api',__name__, url_prefix='/api')
 
+@api.route('/getdata')
+def getdata():
+    return {'yee': 'haw'}
+
 @api.route('/cars', methods = ['POST'])
 @token_required
 def create_car(current_user_token):
@@ -25,7 +29,7 @@ def create_car(current_user_token):
 
 @api.route('/cars', methods = ['GET'])
 @token_required
-def get_contact(current_user_token):
+def get_car(current_user_token):
     a_car = current_user_token.token
     contacts = Contact.query.filter_by(user_token = a_car).all()
     response = contacts_schema.dump(contacts)
