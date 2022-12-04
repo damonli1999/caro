@@ -11,15 +11,15 @@ def getdata():
 @api.route('/cars', methods = ['POST'])
 @token_required
 def create_car(current_user_token):
-    make = request.json['make']
-    model = request.json['model']
-    year = request.json['year']
-    mileage = request.json['mileage']
+    name = request.json['name']
+    email = request.json['email']
+    phone_number = request.json['phone_number']
+    address = request.json['address']
     user_token = current_user_token.token
 
     print(f'BIG TESTER: {current_user_token.token}')
 
-    car = Contact(make, model, year, mileage, user_token = user_token )
+    car = Contact(name, email, phone_number, address, user_token = user_token )
 
     db.session.add(car)
     db.session.commit()
@@ -46,10 +46,10 @@ def get_single_car(current_user_token, id):
 @token_required
 def update_car(current_user_token,id):
     contact = Contact.query.get(id) 
-    contact.make = request.json['make']
-    contact.model = request.json['model']
-    contact.year = request.json['year']
-    contact.mileage = request.json['mileage']
+    contact.name = request.json['name']
+    contact.email = request.json['email']
+    contact.phone_number = request.json['phone_number']
+    contact.address = request.json['address']
     contact.user_token = current_user_token.token
 
     db.session.commit()
